@@ -1,74 +1,45 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.nav h1 a {
+.navbar .container .brand .navbar-brand {
     color: blueviolet;
-    font-size: 34px;
-    text-decoration: none;
+    font-size: 30px;
 }
 
-.nav ul {
-    display: inline-flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav ul li a {
-    text-decoration: none;
+.navbar .container .collapse .navbar-nav .nav-item .nav-custom-link {
     color: blueviolet;
     cursor: pointer;
+    font-weight: 500;
 }
 
-.nav .nav-search {
-    display: flex;
-    flex: 1;
-    margin: 0 5%;
+.navbar .container .input-group .form-group {
+    width: 200px;
 }
 
-.nav .nav-search input {
-    flex: 1;
-    color: blueviolet;
-    border: 1px solid blueviolet;
-    height: 35px;
-    border-right: 0px;
-    // padding: 0 15px;
-    font-family: 'Roboto', sans-serif;
+.navbar .container .input-group .form-group .search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus {
+        border: 1px solid #ddd !important;
+    }
 }
 
-.nav .nav-search button {
+.navbar .container .input-group .search-btn {
+    background-color: blueviolet;
+}
+
+.navbar .container .input-group .btn .search-icon {
     color: white;
-    background: blueviolet;
-    border: 1px solid blueviolet;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.6px;
-    height: 35px;
-    border-left: 0px;
-    padding: 0 15px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
 }
 
-.suggested-result {
-    position: absolute;
-    display: list-item !important;
-    z-index: 10;
-    background-color: white;
-    width: 300px;
-    top: 62px;
-    border: 1px solid #ddd;
+.navbar .container .input-group .list-group {
+    width: 200px;
+    top: 37px;
 }
 
-.suggested-result li {
-    border: 1px solid #ddd;
-    padding: 5px;
-}
-
-.suggested-result li a {
-    cursor: pointer;
+.navbar .container .input-group .list-group .list-group-item a {
     color: blueviolet;
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: none;
 }

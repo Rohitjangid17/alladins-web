@@ -1,79 +1,105 @@
-<nav class="nav">
-    <h1>
-        <a routerLink="/home">Alladin’s</a>
-    </h1>
+<nav class="navbar navbar-expand-lg bg-white d-flex align-items-center shadow-sm z-1 py-3 position-sticky top-0 w-100">
+    <div class="container">
+        <h1 class="brand">
+            <a class="navbar-brand" routerLink="/home">Alladin’s</a>
+        </h1>
+        <!-- search items input start here -->
+        <ng-container *ngIf="menuType !== 'seller'">
+            <div class="input-group mx-auto position-relative">
+                <div class="form-group">
+                    <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()"
+                        class="form-control shadow-none border-1 search-input" placeholder="Search Products" />
+                </div>
+                <button type="button" class="btn search-btn border-0" (click)="searchDataResult(searchInput.value)">
+                    <i class="bi bi-search search-icon"></i>
+                </button>
 
-    <ng-container *ngIf="menuType !== 'seller'">
-        <div class="nav-search">
-            <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()"
-                placeholder="Search for Products">
-            <button type="button" (click)="searchDataResult(searchInput.value)">Search</button>
-            <ul class="suggested-result" *ngIf="searchResult">
-                <ng-container *ngFor="let search of searchResult">
-                    <li>
-                        <a (mousedown)="productDetailsNavigateById(search.id)">
-                            {{search?.productName}}
-                        </a>
-                    </li>
+                <ng-container *ngIf="searchResult">
+                    <ul class="list-group position-absolute z-2 d-flex justify-content-start">
+                        <ng-container *ngFor="let search of searchResult">
+                            <li class="list-group-item">
+                                <a (mousedown)="productDetailsNavigateById(search.id)">
+                                    {{search?.productName | slice:0:19}}...
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ul>
                 </ng-container>
-            </ul>
-        </div>
-    </ng-container>
+            </div>
+        </ng-container>
+        <!-- search items input end here -->
 
-    <ng-container [ngSwitch]="menuType">
-        <ng-container *ngSwitchCase="'default'">
-            <ul>
-                <li>
-                    <a routerLink="/home">Home</a>
-                </li>
-                <li>
-                    <a routerLink="/seller-auth">Seller</a>
-                </li>
-                <li>
-                    <a routerLink="/user-auth">Login/Signup</a>
-                </li>
-                <li>
-                    <a href="#">Cart({{cartItem}})</a>
-                </li>
-            </ul>
-        </ng-container>
-        <ng-container *ngSwitchCase="'user'">
-            <ul>
-                <li>
-                    <a routerLink="/home">Home</a>
-                </li>
-                <li>
-                    <a routerLink="/seller-auth">Seller</a>
-                </li>
-                <li>
-                    <a>{{userName | titlecase}}</a>
-                </li>
-                <li>
-                    <a routerLink="/orders">Orders</a>
-                </li>
-                <li>
-                    <a (click)="userLogout()">Logout</a>
-                </li>
-                <li>
-                    <a [routerLink]="cartItem > 0 ? 'cart-summary':''">Cart({{cartItem}})</a>
-                </li>
-            </ul>
-        </ng-container>
-        <ng-container *ngSwitchCase="'seller'">
-            <ul>
-                <li>
-                    <a routerLink="seller-home">Products</a>
-                </li>
-                <li>
-                    <a routerLink="seller-add-product">Add Product</a>
-                </li>
-                <li>
-                    <a (click)="sellerLogout()">Logout</a>
-                </li>
-                <li>
-                    <a>{{sellerName | titlecase}}</a>
-                </li>
-            </ul>
-        </ng-container>
-    </ng-container>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- default menu start here -->
+            <ng-container [ngSwitch]="menuType">
+                <ng-container *ngSwitchCase="'default'">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/seller-auth">Seller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/user-auth">Login/Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link">Cart({{cartItem}})</a>
+                        </li>
+                    </ul>
+                </ng-container>
+                <!-- default menu end here -->
+
+                <!-- user menu start here -->
+                <ng-container *ngSwitchCase="'user'">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/seller-auth">Seller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link">{{userName |
+                                titlecase}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="/orders">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" (click)="userLogout()">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link"
+                                [routerLink]="cartItem > 0 ? 'cart-summary':''">Cart({{cartItem}})</a>
+                        </li>
+                    </ul>
+                </ng-container>
+                <!-- user menu end here -->
+
+                <!-- seller menu start here -->
+                <ng-container *ngSwitchCase="'seller'">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="seller-home">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" routerLink="seller-add-product">Add Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link" (click)="sellerLogout()">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-custom-link">{{sellerName | titlecase}}</a>
+                        </li>
+                    </ul>
+                </ng-container>
+                <!-- seller menu end here -->
+            </ng-container>
+        </div>
+    </div>
 </nav>
