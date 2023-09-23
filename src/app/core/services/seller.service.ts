@@ -26,7 +26,6 @@ export class SellerService {
 
   userLogin(data: Login) {
     this._httpClient.get(`http://localhost:3000/seller?userEmail=${data.userEmail}&userPassword=${data.userPassword}`, { observe: "response" }).subscribe((result: any) => {
-      console.log(result);
       if (result && result.body && result.body.length) {
         console.log("User Login " + result);
         localStorage.setItem('seller', JSON.stringify(result.body));

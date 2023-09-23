@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Product } from 'src/app/core/interfaces/data-type.ts';
 import { ProductService } from 'src/app/core/services/product.service';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -44,7 +43,6 @@ export class HeaderComponent implements OnInit {
     let cartData = localStorage.getItem("localCart");
     if (cartData) {
       this.cartItem = JSON.parse(cartData).length;
-      console.log(this.cartItem)
     }
     this._productService.cartData.subscribe((items) => {
       this.cartItem = items.length;

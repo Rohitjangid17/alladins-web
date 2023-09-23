@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AuthGuard } from './core/guard/auth.guard';
-import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
-import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
-import { SearchComponent } from './search/search.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { UserAuthComponent } from './user-auth/user-auth.component';
-import { CartSummaryComponent } from './cart-summary/cart-summary.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { OrdersComponent } from './orders/orders.component';
+
+import { HomeComponent } from './pages/home/home.component';
+import { SellerAuthComponent } from './pages/seller-auth/seller-auth.component';
+import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
+import { SellerAddProductComponent } from './pages/seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './pages/seller-update-product/seller-update-product.component';
+import { SearchComponent } from './pages/search/search.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { UserAuthComponent } from './pages/user-auth/user-auth.component';
+import { OrdersComponent } from './pages/orders/orders.component';
+import { CartSummaryComponent } from './pages/cart-summary/cart-summary.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 const routes: Routes = [
   {

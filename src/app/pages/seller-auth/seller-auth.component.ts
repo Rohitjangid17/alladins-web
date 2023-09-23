@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SellerService } from '../core/services/seller.service';
-import { Signup } from '../core/interfaces/data-type.ts';
+import { Signup } from 'src/app/core/interfaces/data-type.ts';
+import { SellerService } from 'src/app/core/services/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -42,7 +42,6 @@ export class SellerAuthComponent implements OnInit {
       userPassword: this.sellerSignupForm.get('user_password')?.value,
       userEmail: this.sellerSignupForm.get('user_email')?.value
     }
-    console.log(signupUserData);
     this._sellerService.userSignup(signupUserData);
   }
 
@@ -52,7 +51,6 @@ export class SellerAuthComponent implements OnInit {
       userEmail: this.sellerLoginForm.get('user_email')?.value,
       userPassword: this.sellerLoginForm.get('user_password')?.value,
     }
-    console.log(loginUserData);
     this._sellerService.userLogin(loginUserData);
     this._sellerService.isLoginError.subscribe((isError) => {
       if (isError) {

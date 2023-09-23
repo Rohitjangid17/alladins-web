@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Order } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-orders',
@@ -9,7 +9,7 @@ import { ProductService } from '../core/services/product.service';
 })
 export class OrdersComponent implements OnInit {
   orderList: Order[] = [];
-  
+
   constructor(
     private _productService: ProductService
   ) { }
@@ -21,7 +21,6 @@ export class OrdersComponent implements OnInit {
   getAllOrdersList() {
     this._productService.orderList().subscribe((orderListRes) => {
       this.orderList = orderListRes;
-      console.log(this.orderList);
     })
   }
 

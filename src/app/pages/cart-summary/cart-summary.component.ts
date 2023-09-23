@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cart, PriceSummary } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Cart, PriceSummary } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-cart-summary',

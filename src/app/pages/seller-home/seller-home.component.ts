@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Router } from '@angular/router';
+import { Product } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-seller-home',
@@ -23,14 +23,12 @@ export class SellerHomeComponent implements OnInit {
 
   getAllProductList() {
     this._productService.getProductList().subscribe((productRes: Product[]) => {
-      console.log(productRes)
       this.productList = productRes;
     })
   }
 
   deleteProduct(product: Product) {
     this._productService.deleteProductWithId(product?.id).subscribe(productRes => {
-      console.log(productRes);
       this.getAllProductList();
     })
   }

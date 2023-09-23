@@ -79,7 +79,6 @@ export class ProductService {
   getCartList(userId: number) {
     return this._httpClient.get<Product[]>(`http://localhost:3000/cart?userId=${userId}`,
       { observe: "response" }).subscribe((cartListRes) => {
-        console.log(cartListRes)
         if (cartListRes && cartListRes.body) {
           this.cartData.emit(cartListRes.body)
         }
@@ -108,7 +107,6 @@ export class ProductService {
 
   deleteCartItems(cartId: number) {
     return this._httpClient.delete(`http://localhost:3000/cart/${cartId}`, { observe: "response" }).subscribe((cartRes) => {
-      console.log(cartRes)
 
       if (cartRes) {
         this.cartData.emit([])

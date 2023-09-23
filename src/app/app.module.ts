@@ -5,19 +5,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-import { SellerHomeComponent } from './seller-home/seller-home.component';
-import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
-import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
-import { SearchComponent } from './search/search.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { CartSummaryComponent } from './cart-summary/cart-summary.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { OrdersComponent } from './orders/orders.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SellerAuthComponent } from './pages/seller-auth/seller-auth.component';
+import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
+import { SellerAddProductComponent } from './pages/seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './pages/seller-update-product/seller-update-product.component';
+import { SearchComponent } from './pages/search/search.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { UserAuthComponent } from './pages/user-auth/user-auth.component';
+import { OrdersComponent } from './pages/orders/orders.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { CartSummaryComponent } from './pages/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Product } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-seller-update-product',
@@ -55,7 +55,6 @@ export class SellerUpdateProductComponent implements OnInit {
       productDescription: this.updateProductForm.get('product_description')?.value,
       productImageUrl: this.updateProductForm.get('product_image_url')?.value,
     };
-    console.log(this.productData)
     this._productService.updateProductWithId(this.productData).subscribe((res) => {
       console.log(res);
     })

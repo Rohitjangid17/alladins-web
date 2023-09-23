@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Cart, Order } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Cart, Order } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-checkout',
@@ -36,7 +36,6 @@ export class CheckoutComponent implements OnInit {
         }
       });
       this.totalPrice = price + (price / 10) + 100 - (price / 10);
-      console.log(this.totalPrice)
     })
   }
 

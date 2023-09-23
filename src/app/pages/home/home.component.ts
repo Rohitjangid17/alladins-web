@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Product } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   popularProductList() {
     this._productService.getPopularProducts().subscribe((popularProductsRes) => {
       this.popularProducts = popularProductsRes;
-      console.log(this.popularProducts);
     })
   }
 

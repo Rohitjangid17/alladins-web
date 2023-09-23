@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cart, Product } from '../core/interfaces/data-type.ts';
-import { ProductService } from '../core/services/product.service';
+import { Cart, Product } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -81,7 +81,6 @@ export class ProductDetailsComponent implements OnInit {
           ...this.productDetails, userId, productId: this.productDetails.id
         }
         delete cartData.id;
-        console.log(cartData);
 
         this._productService.addToCart(cartData).subscribe((cartRes) => {
           if (cartRes) {
@@ -100,7 +99,6 @@ export class ProductDetailsComponent implements OnInit {
       this._productService.removeItemFromCart(productId);
       this.removeCart = false;
     } else {
-      console.log(this.cartData);
       let user = localStorage.getItem('user');
       let userId: number = user && JSON.parse(user).id;
       this._productService.removeToCart(this.cartData.id).subscribe((cartDataRes) => {

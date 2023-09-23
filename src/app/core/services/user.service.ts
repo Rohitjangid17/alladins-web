@@ -28,7 +28,7 @@ export class UserService {
     this._httpClient.get<Signup[]>(`http://localhost:3000/users?userEmail=${data?.userEmail}&userPassword=${data?.userPassword}`, { observe: "response" })
       .subscribe((userRes) => {
         if (userRes && userRes.body && userRes.body.length) {
-          console.log(userRes);
+          console.log("User Login " + userRes);
           localStorage.setItem('user', JSON.stringify(userRes?.body[0]));
           this._router.navigate(["/home"]);
           this.invalidUserAuth.emit(false);

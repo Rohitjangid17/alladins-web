@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../core/services/user.service';
-import { ProductService } from '../core/services/product.service';
-import { Cart, Login, Product, Signup } from '../core/interfaces/data-type.ts';
+import { Cart, Login, Product, Signup } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -53,14 +53,12 @@ export class UserAuthComponent implements OnInit {
       userEmail: this.userLoginForm.get("user_email")?.value,
       userPassword: this.userLoginForm.get("user_password")?.value,
     };
-    console.log(userData);
     this._userService.userLogin(userData);
 
     this._userService.invalidUserAuth.subscribe((invalidUser: boolean) => {
       console.log("apple", invalidUser);
       if (invalidUser) {
         this.authError = "Please Enter Valid User Details";
-        console.log(this.authError)
       } else {
         this.localCartToRemoteCart();
       }
