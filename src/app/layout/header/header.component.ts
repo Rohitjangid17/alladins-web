@@ -1,7 +1,7 @@
-import { Component, OnInit, ɵresetJitOptions } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from 'src/app/interfaces/data-type.ts';
-import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/core/interfaces/data-type.ts';
+import { ProductService } from 'src/app/core/services/product.service';
 
 
 @Component({

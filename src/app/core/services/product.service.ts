@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Cart, Order, Product } from '../interfaces/data-type.ts';
 import { Observable } from 'rxjs';
-import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'

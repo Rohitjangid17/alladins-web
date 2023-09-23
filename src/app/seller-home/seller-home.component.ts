@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../services/product.service';
-import { Product } from '../interfaces/data-type.ts';
-import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../core/interfaces/data-type.ts';
+import { ProductService } from '../core/services/product.service';
 
 @Component({
   selector: 'app-seller-home',
@@ -20,8 +19,6 @@ export class SellerHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllProductList();
-
-
   }
 
   getAllProductList() {

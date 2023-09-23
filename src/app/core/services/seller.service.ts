@@ -1,7 +1,7 @@
-import { CSP_NONCE, EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Login, Signup } from '../interfaces/data-type.ts';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({

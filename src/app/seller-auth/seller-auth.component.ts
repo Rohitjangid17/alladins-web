@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
-import { Signup } from '../interfaces/data-type.ts';
+import { SellerService } from '../core/services/seller.service';
+import { Signup } from '../core/interfaces/data-type.ts';
 
 @Component({
   selector: 'app-seller-auth',

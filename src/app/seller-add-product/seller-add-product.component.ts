@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductService } from '../services/product.service';
-import { Product } from '../interfaces/data-type.ts';
+import { ProductService } from '../core/services/product.service';
+import { Product } from '../core/interfaces/data-type.ts';
 
 @Component({
   selector: 'app-seller-add-product',
