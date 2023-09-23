@@ -1,7 +1,8 @@
 import { Component, OnInit, ɵresetJitOptions } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '../services/product.service';
-import { Product } from '../interfaces/data-type.ts';
+import { Product } from 'src/app/interfaces/data-type.ts';
+import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
   selector: 'app-header',

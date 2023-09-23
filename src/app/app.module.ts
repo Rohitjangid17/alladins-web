@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,16 +13,17 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrdersComponent } from './orders/orders.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent,
+    HeaderComponent,
     SellerAuthComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
