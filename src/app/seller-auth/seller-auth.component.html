@@ -1,0 +1,37 @@
+<div class="seller-auth">
+    <!-- Signup Area -->
+    <ng-container *ngIf="!loginShow">
+        <div class="signup">
+            <h1 class="form-header">Seller Signup</h1>
+            <form class="seller-signup" [formGroup]="sellerSignupForm" (ngSubmit)="signup()">
+                <input type="text" class="form-input" formControlName="user_name" name="name" placeholder="Enter Name">
+                <input type="password" class="form-input" formControlName="user_password" name="password"
+                    placeholder="Enter Password">
+                <input type="email" class="form-input" formControlName="user_email" name="email"
+                    placeholder="Enter Email">
+
+                <button type="submit" class="signup-button" [disabled]="sellerSignupForm.invalid">Sign Up</button>
+
+                <a class="auth-toggle-link" (click)="openLogin()">Already have account? Click to login</a>
+            </form>
+        </div>
+    </ng-container>
+
+    <!-- Login Area -->
+    <ng-container *ngIf="loginShow">
+        <div class="login">
+            <h1 class="form-header">Seller Login</h1>
+            <p class="error">{{authError}}</p>
+            <form class="seller-login" [formGroup]="sellerLoginForm" (ngSubmit)="login()">
+                <input type="email" class="form-input" formControlName="user_email" name="email"
+                    placeholder="Enter Email">
+                <input type="password" class="form-input" formControlName="user_password" name="password"
+                    placeholder="Enter Password">
+
+                <button type="submit" class="login-button" [disabled]="sellerLoginForm.invalid">Login</button>
+                <a class="auth-toggle-link" (click)="openSignup()">Don't have account? Click to signup</a>
+            </form>
+        </div>
+    </ng-container>
+
+</div>

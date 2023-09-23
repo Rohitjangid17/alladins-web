@@ -1,0 +1,59 @@
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <ng-container *ngFor="let popularProduct of popularProducts">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <a routerLink="/product-details/{{popularProduct?.id}}">
+                    <img [src]="popularProduct?.productImageUrl" class="d-block w-100 img-fluid slider-image"
+                        alt="no image">
+                </a>
+                <div class="carousel-caption popular-product-content">
+                    <h5 class="text-white">{{popularProduct?.productName | slice:0:20}}...</h5>
+                    <p class="text-white">{{popularProduct?.productDescription | slice:0:15}}...</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container product-list-wrapper">
+    <h1>Trendy Products</h1>
+    <div class="row">
+        <ng-container *ngFor="let trendyProduct of trendyProducts">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="product-item">
+                    <img [src]="trendyProduct?.productImageUrl" class="img-fluid" alt="no image" />
+
+                    <div class="product-details">
+                        <h6 class="name-head">{{trendyProduct?.productName | slice:0:20}}...</h6>
+                        <div class="product-price">
+                            <h6>Price: {{trendyProduct?.productPrice}}</h6>
+                        </div>
+                        <div class="product-color">
+                            <h6>Color: {{trendyProduct?.productColor}}</h6>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <a routerLink="/product-details/{{trendyProduct?.id}}">View Details</a>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<nav class="nav">
+    <h1>
+        <a routerLink="/home">Alladin’s</a>
+    </h1>
+
+    <ng-container *ngIf="menuType !== 'seller'">
+        <div class="nav-search">
+            <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()"
+                placeholder="Search for Products">
+            <button type="button" (click)="searchDataResult(searchInput.value)">Search</button>
+            <ul class="suggested-result" *ngIf="searchResult">
+                <ng-container *ngFor="let search of searchResult">
+                    <li>
+                        <a (mousedown)="productDetailsNavigateById(search.id)">
+                            {{search?.productName}}
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </ng-container>
+
+    <ng-container [ngSwitch]="menuType">
+        <ng-container *ngSwitchCase="'default'">
+            <ul>
+                <li>
+                    <a routerLink="/home">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/seller-auth">Seller</a>
+                </li>
+                <li>
+                    <a routerLink="/user-auth">Login/Signup</a>
+                </li>
+                <li>
+                    <a href="#">Cart({{cartItem}})</a>
+                </li>
+            </ul>
+        </ng-container>
+        <ng-container *ngSwitchCase="'user'">
+            <ul>
+                <li>
+                    <a routerLink="/home">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/seller-auth">Seller</a>
+                </li>
+                <li>
+                    <a>{{userName | titlecase}}</a>
+                </li>
+                <li>
+                    <a routerLink="/orders">Orders</a>
+                </li>
+                <li>
+                    <a (click)="userLogout()">Logout</a>
+                </li>
+                <li>
+                    <a [routerLink]="cartItem > 0 ? 'cart-summary':''">Cart({{cartItem}})</a>
+                </li>
+            </ul>
+        </ng-container>
+        <ng-container *ngSwitchCase="'seller'">
+            <ul>
+                <li>
+                    <a routerLink="seller-home">Products</a>
+                </li>
+                <li>
+                    <a routerLink="seller-add-product">Add Product</a>
+                </li>
+                <li>
+                    <a (click)="sellerLogout()">Logout</a>
+                </li>
+                <li>
+                    <a>{{sellerName | titlecase}}</a>
+                </li>
+            </ul>
+        </ng-container>
+    </ng-container>
+</nav>

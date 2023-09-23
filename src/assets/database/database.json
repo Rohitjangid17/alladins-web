@@ -1,0 +1,231 @@
+{
+  "seller": [
+    {
+      "userName": "sam sandhu",
+      "userPassword": "abc@123",
+      "userEmail": "sam@seller.com",
+      "id": 1
+    },
+    {
+      "userName": "peter",
+      "userPassword": "abc@123",
+      "userEmail": "peter@123gmail.com",
+      "id": 2
+    },
+    {
+      "userName": "bruce",
+      "userPassword": "abc@123",
+      "userEmail": "bruce@test.com",
+      "id": 3
+    },
+    {
+      "userName": "Rohit Jangid",
+      "userPassword": "1234",
+      "userEmail": "abc123@gmail.com",
+      "id": 4
+    },
+    {
+      "userName": "",
+      "userPassword": "",
+      "userEmail": "",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "productName": "Apple 2023 MacBook Air Laptop with M2 chip: 38.91 cm (15.3-inch) Liquid Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera,Touch ID. Works with iPhone/iPad; Silver",
+      "productPrice": "100000",
+      "productColor": "Silver",
+      "productCategory": "Laptop",
+      "productDescription": "The high-resolution, 38.91-centimetre (15.3-inch) Liquid Retina display features 500 nits of brightness, P3 wide colour and support for one billion colours for vibrant images and incredible detail. (The display on the 15-inch MacBook Air has rounded corners at the top. When measured as a standard rectangular shape, the screen is 38.91 centimetres (15.3 inches) diagonally (actual viewable area is less.)",
+      "productImageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    },
+    {
+      "productName": "Lux Cozi Men's Assorted Inner Elastic Semi Long Printed Trunk| Printed Mini Trunk for Men (Color & Prints May Vary)",
+      "productPrice": "1212",
+      "productColor": "Multi Color",
+      "productCategory": "Mens Innerwear",
+      "productDescription": "Lux Cozi Men's Assorted Inner Elastic Semi Long Printed Trunk,Stylish and comfortable design",
+      "productImageUrl": "https://m.media-amazon.com/images/I/81nbEpTh8eL._UY741_.jpg",
+      "id": 4
+    },
+    {
+      "productName": "new balance DC-1280 English Willow Cricket Bat Full Size with Cover, Wooden",
+      "productPrice": "2000000",
+      "productColor": "White",
+      "productCategory": "Sports",
+      "productDescription": "English Willow Cricket Bat\nFull Size with Cover\nGood quality product",
+      "productImageUrl": "https://m.media-amazon.com/images/I/51IAJ0XJmuL._SL1334_.jpg",
+      "id": 5
+    },
+    {
+      "productName": "Apple Watch Series 8 [GPS 45 mm] Smart Watch w/Midnight Aluminium Case with Midnight Sport Band. Fitness Tracker, Blood Oxygen & ECG Apps, Always-On...",
+      "productPrice": "56",
+      "productColor": "black",
+      "productCategory": "smart watch",
+      "productDescription": "WHY APPLE WATCH SERIES 8 — Your essential companion for a healthy life is now even more powerful. Advanced sensors provide insights to help you better understand your health. New safety features can get you help when you need it. The bright, Always-On Retina display is easy to read, even when your wrist is down.",
+      "productImageUrl": "https://m.media-amazon.com/images/I/71XMTLtZd5L._SL1500_.jpg",
+      "id": 6
+    },
+    {
+      "productName": "Apple iPhone 14 Pro Max (256 GB) - Space Black",
+      "productPrice": "1,43,990",
+      "productColor": "Space Black",
+      "productCategory": "Mobile",
+      "productDescription": "17.00 cm (6.7-inch) Super Retina XDR display featuring Always-On and ProMotion\nDynamic Island, a magical new way to interact with iPhone\n48MP Main camera for up to 4x greater resolution\nCinematic mode now in 4K Dolby Vision up to 30 fps\nAction mode for smooth, steady, handheld videos\nAll-day battery life and up to 29 hours of video playback\nVital safety technology — Crash Detection can detect a severe car crash and call for help",
+      "productImageUrl": "https://m.media-amazon.com/images/I/610pghkO81L._SL1500_.jpg",
+      "id": 8
+    },
+    {
+      "productName": "boAt Rockerz 255 Pro+ Bluetooth in Ear Earphones with Upto 60 Hours Playback, ASAP Charge, IPX7, Dual Pairing and Bluetooth v5.0(Navy Blue)",
+      "productPrice": "2000",
+      "productColor": "Black",
+      "productCategory": "earphones ",
+      "productDescription": "Playback- Leave all charging worries at bay as the Rockerz 255 Pro+ comes with a humongous battery back up of 60 Hours\nASAP Charge- With a few minutes of ASAP Charge you can get upto 10 hours of audio time by charging them for only 10 mins\nDrivers- The unbeatable boAt signature sound shines through no matter what are you playing courtesy its 10mm drivers\nIP Rating- Rockerz 255 Pro+ are perfect for the outdoors and daily workout as they are IPX7 rated\nControls- Its multi-function Integrated controls lends an intuitive listening experience with volume increase and Decrease and Stop and Play buttons\nDual Pairing- This neckband features dual pairing so that you can connect 2 devices at once. Live a wireless life with advanced BT 5.0 technology\nMagnetic Earbuds- Live tangle- free life with its magnetic earbuds. Note: They do not support play/pause function\nVoice Assistant- Check weather, news, and latest cricket scores with a single press VA on Google and SIRI with its single press voice assistant",
+      "productImageUrl": "https://m.media-amazon.com/images/I/515jdxLlmaL._SL1500_.jpg",
+      "id": 9
+    },
+    {
+      "productName": "boAt Airdopes 141 Bluetooth Truly Wireless in Ear Headphones with 42H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)",
+      "productPrice": "43434",
+      "productColor": "black",
+      "productCategory": "Earphones ",
+      "productDescription": "ASAP Charge- The earbuds are equipped with our ASAP Charge feature that offers up to 75 min of playtime in just 5 min of charge; while the carry case comes along with the Type C interface\nInstant Connect- Connect to your morning playlists without any hiccup via the Insta Wake N’ Pair technology that powers on the earbuds as soon as you open the case cover\nIP Rating- The earbuds’ body comes protected with IPX4 rating for water and sweat resistance\nVoice Assistant- You can summon your default voice assistant(s) with ease via its One Touch Voice Assistant",
+      "productImageUrl": "https://m.media-amazon.com/images/I/61KNJav3S9L._SL1500_.jpg",
+      "id": 10
+    },
+    {
+      "productName": "Men Printed Round Neck Cotton Blend Grey T-Shirt",
+      "productPrice": "199",
+      "productColor": "gray",
+      "productCategory": "Men's T-Shirt",
+      "productDescription": "it is good t-shirt for boys and girls.",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/i/b/g/s-half-triangel-black-one-nb-nicky-boy-original-imagmhzyv6b64vfb.jpeg?q=70",
+      "id": 11
+    },
+    {
+      "productName": "Women Printed Round Neck Polyester White T-Shirt",
+      "productPrice": "299",
+      "productColor": "white",
+      "productCategory": "",
+      "productDescription": "this is top to girls wear",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/top/i/y/t/l-flipkart-ananya-white-dream-beauty-fashion-original-imagkygz2eysgzkh.jpeg?q=70",
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "userName": "anil",
+      "userEmail": "anil123@test.com",
+      "userPassword": "1234",
+      "id": 1
+    },
+    {
+      "userName": "peter",
+      "userEmail": "peter@user.com",
+      "userPassword": "1234",
+      "id": 2
+    },
+    {
+      "userName": "tony",
+      "userEmail": "tony@test.com",
+      "userPassword": "1234",
+      "id": 3
+    },
+    {
+      "userName": "vinay",
+      "userEmail": "vinay@user.com",
+      "userPassword": "1234",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "productName": "Men Printed Round Neck Cotton Blend Grey T-Shirt",
+      "productPrice": "199",
+      "productColor": "gray",
+      "productCategory": "Men's T-Shirt",
+      "productDescription": "it is good t-shirt for boys and girls.",
+      "productImageUrl": "https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/i/b/g/s-half-triangel-black-one-nb-nicky-boy-original-imagmhzyv6b64vfb.jpeg?q=70",
+      "quantity": 1,
+      "productId": 11,
+      "userId": 3,
+      "id": 1
+    },
+    {
+      "productName": "boAt Airdopes 141 Bluetooth Truly Wireless in Ear Headphones with 42H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)",
+      "productPrice": "43434",
+      "productColor": "black",
+      "productCategory": "Earphones ",
+      "productDescription": "ASAP Charge- The earbuds are equipped with our ASAP Charge feature that offers up to 75 min of playtime in just 5 min of charge; while the carry case comes along with the Type C interface\nInstant Connect- Connect to your morning playlists without any hiccup via the Insta Wake N’ Pair technology that powers on the earbuds as soon as you open the case cover\nIP Rating- The earbuds’ body comes protected with IPX4 rating for water and sweat resistance\nVoice Assistant- You can summon your default voice assistant(s) with ease via its One Touch Voice Assistant",
+      "productImageUrl": "https://m.media-amazon.com/images/I/61KNJav3S9L._SL1500_.jpg",
+      "quantity": 1,
+      "productId": 10,
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "productName": "boAt Airdopes 141 Bluetooth Truly Wireless in Ear Headphones with 42H Playtime,Low Latency Mode for Gaming, ENx Tech, IWP, IPX4 Water Resistance, Smooth Touch Controls(Bold Black)",
+      "productPrice": "43434",
+      "productColor": "black",
+      "productCategory": "Earphones ",
+      "productDescription": "ASAP Charge- The earbuds are equipped with our ASAP Charge feature that offers up to 75 min of playtime in just 5 min of charge; while the carry case comes along with the Type C interface\nInstant Connect- Connect to your morning playlists without any hiccup via the Insta Wake N’ Pair technology that powers on the earbuds as soon as you open the case cover\nIP Rating- The earbuds’ body comes protected with IPX4 rating for water and sweat resistance\nVoice Assistant- You can summon your default voice assistant(s) with ease via its One Touch Voice Assistant",
+      "productImageUrl": "https://m.media-amazon.com/images/I/61KNJav3S9L._SL1500_.jpg",
+      "quantity": 1,
+      "userId": 3,
+      "productId": 10,
+      "id": 3
+    },
+    {
+      "productName": "Apple 2023 MacBook Air Laptop with M2 chip: 38.91 cm (15.3-inch) Liquid Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera,Touch ID. Works with iPhone/iPad; Silver",
+      "productPrice": "100000",
+      "productColor": "Silver",
+      "productCategory": "Laptop",
+      "productDescription": "The high-resolution, 38.91-centimetre (15.3-inch) Liquid Retina display features 500 nits of brightness, P3 wide colour and support for one billion colours for vibrant images and incredible detail. (The display on the 15-inch MacBook Air has rounded corners at the top. When measured as a standard rectangular shape, the screen is 38.91 centimetres (15.3 inches) diagonally (actual viewable area is less.)",
+      "productImageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "quantity": 1,
+      "userId": 3,
+      "productId": 2,
+      "id": 4
+    },
+    {
+      "productName": "Apple 2023 MacBook Air Laptop with M2 chip: 38.91 cm (15.3-inch) Liquid Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera,Touch ID. Works with iPhone/iPad; Silver",
+      "productPrice": "100000",
+      "productColor": "Silver",
+      "productCategory": "Laptop",
+      "productDescription": "The high-resolution, 38.91-centimetre (15.3-inch) Liquid Retina display features 500 nits of brightness, P3 wide colour and support for one billion colours for vibrant images and incredible detail. (The display on the 15-inch MacBook Air has rounded corners at the top. When measured as a standard rectangular shape, the screen is 38.91 centimetres (15.3 inches) diagonally (actual viewable area is less.)",
+      "productImageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "quantity": 1,
+      "userId": 3,
+      "productId": 2,
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "email": "jangidrohit817@gmail.com",
+      "address": "Aditya nagar morija road chomu near ssmg hospital",
+      "phoneNumber": "09352684852",
+      "totalPrice": 604,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "email": "jangidrohit817@gmail.com",
+      "address": "Aditya nagar morija road chomu near ssmg hospital",
+      "phoneNumber": "09352684852",
+      "totalPrice": 604,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "email": "jangidrohit817@gmail.com",
+      "address": "Aditya nagar morija road chomu near ssmg hospital",
+      "phoneNumber": "09352684852",
+      "totalPrice": 8100,
+      "userId": 2,
+      "id": 6
+    }
+  ]
+}

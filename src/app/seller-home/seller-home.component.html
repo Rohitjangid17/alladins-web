@@ -1,0 +1,36 @@
+<div class="product-list">
+    <h1>All Product List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <ng-container *ngFor="let product of productList">
+                <tr>
+                    <td>
+                        <img [src]="product?.productImageUrl" alt="no image" />
+                    </td>
+                    <td>{{product?.productName}}</td>
+                    <td>{{product?.productPrice}}</td>
+                    <td>{{product?.productColor}}</td>
+                    <td>{{product?.productCategory}}</td>
+                    <td>{{product?.productDescription}}</td>
+                    <td>
+                        <button class="edit-button" (click)="deleteProduct(product)">Delete</button>
+                        <button (click)="updateProduct(product)">Edit</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

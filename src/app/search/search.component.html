@@ -1,0 +1,31 @@
+<div class="container">
+    <ng-container *ngFor="let search of searchQuery">
+        <ng-container *ngIf="searchQuery.length > 0;">
+            <div class="row search-item">
+                <div class="col-sm-3">
+                    <a routerLink="/product-details/{{search?.id}}">
+                        <img [src]="search?.productImageUrl" class=" img-fluid" alt="no image">
+                    </a>
+                </div>
+                <div class="col-sm-8 product-detail">
+                    <h6>
+                        <a routerLink="/product-details/{{search?.id}}">{{search?.productName | slice:0:20}}...</a>
+                    </h6>
+                    <p>
+                        <b>Price: {{search?.productPrice}}</b>
+                    </p>
+                    <p>
+                        <span>Color: {{search?.productColor}}</span>
+                        <span>Category: {{search?.productCategory}}</span>
+                    </p>
+                    <p>{{search?.productDescription}}</p>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="searchQuery.length < 0;">
+            <p>not find query!!</p>
+        </ng-container>
+
+    </ng-container>
+</div>

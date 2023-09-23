@@ -1,0 +1,36 @@
+<div class="user-auth">
+    <ng-container *ngIf="!showLogin">
+        <div class="user-signup">
+            <h1>User Signup</h1>
+
+            <form [formGroup]="userSignupForm" class="user-signup-form" (ngSubmit)="userSignup()">
+                <input type="text" name="name" class="form-input" formControlName="user_name"
+                    placeholder="Enter user name" />
+                <input type="text" name="email" class="form-input" formControlName="user_email"
+                    placeholder="Enter user email" />
+                <input type="password" name="password" class="form-input" formControlName="user_password"
+                    placeholder="Enter password" />
+
+                <button type="submit" class="user-signup-button" [disabled]="userSignupForm.invalid">Signup</button>
+                <a class="auth-toggle-link" (click)="openUserLogin()">Already have account? Click to login</a>
+            </form>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showLogin">
+        <div class="user-login">
+            <h1>User Login</h1>
+            <form [formGroup]="userLoginForm" class="user-signup-form" (ngSubmit)="userLogin()">
+                <p>{{authError}}</p>
+                <input type="text" name="email" class="form-input" formControlName="user_email"
+                    placeholder="Enter user email" />
+                <input type="password" name="password" class="form-input" formControlName="user_password"
+                    placeholder="Enter password" />
+
+                <button type="submit" class="user-signup-button" [disabled]="userLoginForm.invalid">Login</button>
+                <a class="auth-toggle-link" (click)="openUserSignup()">Don't have account? Click to signup</a>
+            </form>
+        </div>
+    </ng-container>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="container cart-summary">
+    <h1>Cart Summary</h1>
+
+    <div class="row">
+        <div class="col-md-8 user-add-cart-details">
+            <ng-container *ngFor="let cart of cartDetails">
+                <ul>
+                    <li>
+                        <img [src]="cart?.productImageUrl" class="img-fluid" alt="no image">
+                    </li>
+                    <li>
+                        <span>{{cart?.productName |slice:0:10 }}...</span>
+                    </li>
+                    <li>
+                        <span>Price: {{cart?.productPrice}}</span>
+                    </li>
+                    <li>
+                        <span>Quantity: {{cart?.quantity}}</span>
+                    </li>
+                    <li>
+                        <button class="remove-cart-btn" (click)="removeToCart(cart.id)">Remove to cart</button>
+                    </li>
+                </ul>
+            </ng-container>
+        </div>
+        <div class="col-md-4 user-add-cart-summary">
+            <h3>Price Summary</h3>
+            <ul>
+                <li>
+                    <span>Amount</span><span>{{priceSummary.price}}</span>
+                </li>
+                <li>
+                    <span>Tax</span><span>{{priceSummary.tax}}</span>
+                </li>
+                <li>
+                    <span>Delivery</span><span>{{priceSummary.delivery}}</span>
+                </li>
+                <li>
+                    <span>Discount</span><span>{{priceSummary.discount}}</span>
+                </li>
+                <li>
+                    <span>
+                        <h4>Total</h4>
+                    </span>
+                    <span>
+                        <h4>{{priceSummary.total}}</h4>
+                    </span>
+                </li>
+                <button type="button" class="price-summary-checkout" (click)="checkout()">Checkout</button>
+            </ul>
+        </div>
+    </div>
+</div>

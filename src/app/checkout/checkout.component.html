@@ -1,0 +1,23 @@
+<div class="container checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+        <div class="col-md-7 shipping-address">
+            <h4>Add Shipping Address</h4>
+            <!-- order data form -->
+            <form class="checkout-data-form" [formGroup]="orderDataForm" (ngSubmit)="orderNow()">
+                <input type="text" class="form-input" name="email" formControlName="email"
+                    placeholder="Enter your email">
+                <input type="text" class="form-input" name="address" formControlName="address"
+                    placeholder="Enter your address">
+                <input type="text" class="form-input" name="phone" formControlName="phoneNumber"
+                    placeholder="Enter your phone number">
+
+                <button type="submit" class="order-now-btn">Order Now</button>
+            </form>
+        </div>
+        <div class="col-md-5">
+            <h3>Total Amount: {{totalPrice}}</h3>
+            <h4>Payment Method : <strong>Pay on Delivery</strong></h4>
+        </div>
+    </div>
+</div>

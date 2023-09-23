@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row product-details" *ngIf="productDetails">
+        <div class="col-md-6">
+            <img [src]="productDetails.productImageUrl" class="img-fluid object-fit-cover product-image" alt="no image">
+        </div>
+        <div class="col-md-6">
+            <div class="details">
+                <h1>{{productDetails.productName}}</h1>
+                <h3>Price: {{productDetails.productPrice}}</h3>
+                <div class="">
+                    Color: <h5 [style.backgroundColor]="productDetails.productColor" class="product-color">
+                    </h5>
+                </div>
+                <h6>Category: {{productDetails.productCategory}}</h6>
+                <h6>Category: {{productDetails.productDescription}}</h6>
+
+                <div class="d-flex gap-3">
+                    <button class="buy-now">Buy Now</button>
+                    <ng-container *ngIf="!removeCart">
+                        <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
+                    </ng-container>
+                    <ng-container *ngIf="removeCart">
+                        <button class="add-to-cart" (click)="removeToCart(productDetails.id)">Remove to Cart</button>
+                    </ng-container>
+
+                </div>
+
+                <div class="quantity-group">
+                    <button (click)="handleQuantity('min')">-</button>
+                    <input type="text" [value]="productQuantity" readonly />
+                    <button (click)="handleQuantity('plus')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

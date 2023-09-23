@@ -1,0 +1,31 @@
+// .my-orders{
+//     margin-bottom: 100px;
+// }
+
+.my-orders h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: blueviolet;
+}
+
+.order-image {
+    object-fit: cover;
+    width: 100px;
+}
+
+.order-cancel-btn {
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.order-data{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}

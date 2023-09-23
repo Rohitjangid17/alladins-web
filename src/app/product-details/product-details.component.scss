@@ -1,0 +1,40 @@
+.product-details {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.product-color {
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+h1,
+h5,
+h6 {
+    margin-bottom: 20px;
+}
+
+.add-to-cart,
+.buy-now {
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.quantity-group {
+    margin-top: 20px;
+}
+
+.quantity-group button {
+    padding: 10px;
+}
+
+.quantity-group input { 
+    width: 50px;
+    padding: 10px;
+}
