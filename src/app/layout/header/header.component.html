@@ -5,7 +5,7 @@
         </h1>
         <!-- search items input start here -->
         <ng-container *ngIf="menuType !== 'seller'">
-            <div class="input-group mx-auto position-relative">
+            <div class="input-group position-relative">
                 <div class="form-group">
                     <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()"
                         class="form-control shadow-none border-1 search-input" placeholder="Search Products" />
