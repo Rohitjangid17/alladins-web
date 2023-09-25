@@ -3,16 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guard/auth.guard';
 
 import { HomeComponent } from './pages/home/home.component';
-import { ProductsComponent } from './pages/products/seller-home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { CartSummaryComponent } from './pages/cart-summary/cart-summary.component';
 import { SellerAuthComponent } from './core/auth/seller-auth/seller-auth.component';
 import { UserAuthComponent } from './core/auth/user-auth/user-auth.component';
-import { SellerAddProductComponent } from './pages/products/seller-add-product/seller-add-product.component';
-import { SellerUpdateProductComponent } from './pages/products/seller-update-product/seller-update-product.component';
-import { ProductDetailsComponent } from './pages/products/product-details/product-details.component';
 import { CheckoutComponent } from './pages/orders/checkout/checkout.component';
+import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
+import { SellerAddProductComponent } from './pages/seller-home/seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './pages/seller-home/seller-update-product/seller-update-product.component';
+import { ProductDetailsComponent } from './pages/seller-home/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
     path: "seller-auth", component: SellerAuthComponent
   },
   {
-    path: "products", component: ProductsComponent, canActivate: [AuthGuard]
+    path: "seller-home", component: SellerHomeComponent, canActivate: [AuthGuard]
   },
   {
     path: "seller-add-product", component: SellerAddProductComponent, canActivate: [AuthGuard]
