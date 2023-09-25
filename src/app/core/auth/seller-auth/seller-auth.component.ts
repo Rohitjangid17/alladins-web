@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Signup } from 'src/app/core/interfaces/data-type.ts';
 import { SellerService } from 'src/app/core/services/seller.service';
 
@@ -12,13 +11,12 @@ import { SellerService } from 'src/app/core/services/seller.service';
 export class SellerAuthComponent implements OnInit {
   sellerSignupForm: FormGroup;
   sellerLoginForm: FormGroup;
-  loginShow: boolean = false;
+  showStage: boolean = false;
   authError: string = "";
 
   constructor(
     private _formBuilder: FormBuilder,
     private _sellerService: SellerService,
-    private _router: Router
   ) {
     this.sellerSignupForm = this._formBuilder.group({
       user_name: ["", Validators.required],
@@ -60,6 +58,6 @@ export class SellerAuthComponent implements OnInit {
   }
 
   switchStage() {
-    return this.loginShow = this.loginShow ? false : true;
+    return this.showStage = this.showStage ? false : true;
   }
 }

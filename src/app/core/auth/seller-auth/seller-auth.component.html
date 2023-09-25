@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <!-- signup screen start here -->
-            <ng-container *ngIf="!loginShow">
+            <ng-container *ngIf="!showStage">
                 <div class="signup d-flex justify-content-center flex-column align-items-center">
                     <form class="seller-signup border p-3 shadow-sm mt-5" [formGroup]="sellerSignupForm"
                         (ngSubmit)="signup()">
@@ -41,7 +41,7 @@
             <!-- signup screen end here -->
 
             <!-- login screen start here -->
-            <ng-container *ngIf="loginShow">
+            <ng-container *ngIf="showStage">
                 <div class="login d-flex justify-content-center flex-column align-items-center">
                     <p class="error">{{authError}}</p>
                     <form class="seller-login border p-3 shadow-sm mt-5" [formGroup]="sellerLoginForm"
