@@ -9,7 +9,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SellerAuthComponent } from './pages/seller-auth/seller-auth.component';
-import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
+import { ProductsComponent } from './pages/products/seller-home.component';
 import { SellerAddProductComponent } from './pages/seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './pages/seller-update-product/seller-update-product.component';
 import { SearchComponent } from './pages/search/search.component';
@@ -25,7 +25,7 @@ import { CartSummaryComponent } from './pages/cart-summary/cart-summary.componen
     HomeComponent,
     HeaderComponent,
     SellerAuthComponent,
-    SellerHomeComponent,
+    ProductsComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
     SearchComponent,

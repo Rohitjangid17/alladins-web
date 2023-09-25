@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/core/services/product.service';
   templateUrl: './seller-home.component.html',
   styleUrls: ['./seller-home.component.scss']
 })
-export class SellerHomeComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   productList: Product[] = [];
   product: any;
 
