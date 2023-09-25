@@ -43,3 +43,21 @@
 .navbar-toggler {
     border: none;
 }
+
+.user-name,
+.seller-name {
+    height: 35px;
+    width: 35px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.user-name a,
+.seller-name a {
+    padding: 0 12px;
+    color: white !important;
+    font-weight: 700;
+}

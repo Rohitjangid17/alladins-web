@@ -64,10 +64,6 @@
                             <a class="nav-link nav-custom-link" routerLink="/seller-auth">Seller</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-custom-link">{{userName |
-                                titlecase}}</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link nav-custom-link" routerLink="/orders">Orders</a>
                         </li>
                         <li class="nav-item">
@@ -76,6 +72,10 @@
                         <li class="nav-item">
                             <a class="nav-link nav-custom-link"
                                 [routerLink]="cartItem > 0 ? 'cart-summary':''">Cart({{cartItem}})</a>
+                        </li>
+                        <li class="nav-item user-name rounded-pill">
+                            <a class="nav-link nav-custom-link">{{ userName | slice:0:1 |
+                                uppercase}}</a>
                         </li>
                     </ul>
                 </ng-container>
@@ -93,8 +93,8 @@
                         <li class="nav-item">
                             <a class="nav-link nav-custom-link" (click)="sellerLogout()">Logout</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-custom-link">{{sellerName | titlecase}}</a>
+                        <li class="nav-item seller-name rounded-pill">
+                            <a class="nav-link nav-custom-link">{{sellerName | slice:0:1 | uppercase}}</a>
                         </li>
                     </ul>
                 </ng-container>
