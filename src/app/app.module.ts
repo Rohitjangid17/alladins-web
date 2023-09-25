@@ -18,6 +18,7 @@ import { SellerUpdateProductComponent } from './pages/products/seller-update-pro
 import { SellerAddProductComponent } from './pages/products/seller-add-product/seller-add-product.component';
 import { ProductDetailsComponent } from './pages/products/product-details/product-details.component';
 import { CheckoutComponent } from './pages/orders/checkout/checkout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CheckoutComponent } from './pages/orders/checkout/checkout.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
