@@ -1,26 +1,74 @@
-.product-list h1 {
+.container h1 {
     text-align: center;
-    margin-bottom: 50px;
-    margin-top: 80px;
     color: blueviolet;
+    margin: 40px 0 30px 0;
+    font-size: 30px;
 }
 
-
-table {
-    text-align: left;
-    color: blueviolet;
-    border-collapse: collapse;
+.container .row .col-12 .product-list {
+    border-radius: 10px;
 }
 
-table td,
-table th {
-    border: 1px solid blueviolet;
-    padding: 10px;
-    min-width: 160px;
+.container .row .col-12 .product-list .product-list-container .product-list-data {
+    display: grid;
+    overflow-x: scroll;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+.container .row .col-12 .product-list .product-list-container .product-list-data .inventory-grid {
+    display: grid;
+    grid-template-columns: 60px 211px 70px 100px 131px 224px 90px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+}
+
+.container .row .col-12 .product-list .product-list-container .product-list-data .product-list-header {
+    background-color: blueviolet;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.container .row .col-12 .product-list .product-list-container .product-list-data .product-list-header .product-header-content {
+    color: white;
+    font-weight: 500;
+}
+
+.container .row .col-12 .product-list .product-list-container .product-list-data .product-list-screen {
+    height: 58vh;
+    overflow-y: overlay;
+}
+
+.container .row .col-12 .product-list .product-list-container .product-list-data .product-list-screen .product-list-row {
+    border-bottom: 1px solid #DDD;
+}
+
+.container .row .col-12 .product-list .product-list-container .product-list-data .product-list-screen .inventory-grid .product-row-content img {
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+}
+
+@media (min-width: 576px) {
+    .container .row .col-12 .product-list .product-list-container .product-list-data .inventory-grid {
+        grid-template-columns: 60px 196px 61px 65px 85px 208px 90px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container .row .col-12 .product-list .product-list-container .product-list-data .inventory-grid {
+        grid-template-columns: 60px 196px 61px 65px 85px 208px 90px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container .row .col-12 .product-list .product-list-container .product-list-data .inventory-grid {
+        grid-template-columns: 60px auto 65px 82px 93px 204px 85px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container .row .col-12 .product-list .product-list-container .product-list-data .inventory-grid {
+        grid-template-columns: 60px auto 67px 89px 121px 233px 88px;
+    }
 }

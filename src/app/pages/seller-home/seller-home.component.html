@@ -1,36 +1,112 @@
-<div class="product-list">
+<div class="container">
     <h1>All Product List</h1>
+    <div class="row">
+        <div class="col-12">
+            <div class="product-list border d-flex flex-column shadow-sm">
+                <div class="product-list-container">
+                    <div class="product-list-data">
+                        <!-- product list header start here -->
+                        <div class="inventory-grid product-list-header position-sticky top-0">
+                            <!-- header product image -->
+                            <div class="product-header-content">
+                                Image
+                            </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+                            <!-- header product name -->
+                            <div class="product-header-content">
+                                Name
+                            </div>
 
-        <tbody>
-            <ng-container *ngFor="let product of productList">
-                <tr>
-                    <td>
-                        <img [src]="product?.productImageUrl" alt="no image" />
-                    </td>
-                    <td>{{product?.productName}}</td>
-                    <td>{{product?.productPrice}}</td>
-                    <td>{{product?.productColor}}</td>
-                    <td>{{product?.productCategory}}</td>
-                    <td>{{product?.productDescription}}</td>
-                    <td>
-                        <button class="edit-button" (click)="deleteProduct(product)">Delete</button>
-                        <button (click)="updateProduct(product)">Edit</button>
-                    </td>
-                </tr>
-            </ng-container>
-        </tbody>
-    </table>
+                            <!-- header product price -->
+                            <div class="product-header-content">
+                                Price
+                            </div>
+
+                            <!-- header product color -->
+                            <div class="product-header-content">
+                                Color
+                            </div>
+
+                            <!-- header product category -->
+                            <div class="product-header-content">
+                                Category
+                            </div>
+
+                            <!-- header product description -->
+                            <div class="product-header-content">
+                                Description
+                            </div>
+
+                            <!-- header product action -->
+                            <div class="product-header-content">
+                                Action
+                            </div>
+                        </div>
+                        <!-- product list header end here -->
+
+                        <!-- product list screen start here -->
+                        <div class="product-list-screen">
+                            <!-- product list row start here -->
+                            <ng-container *ngFor="let product of productList">
+                                <div class="inventory-grid product-list-row">
+                                    <!-- row product image -->
+                                    <div class="product-row-content">
+                                        <img [src]="product?.productImageUrl" class="img-fluid object-fit-cover"
+                                            alt="no image" />
+                                    </div>
+
+                                    <!-- row product name -->
+                                    <div class="product-row-content">
+                                        <div>
+                                            {{product?.productName | slice:0:35}}...
+                                        </div>
+                                    </div>
+
+                                    <!-- row product price -->
+                                    <div class="product-row-content">
+                                        <div>
+                                            {{product?.productPrice}}
+                                        </div>
+                                    </div>
+
+                                    <!-- row product color -->
+                                    <div class="product-row-content">
+                                        <div>
+                                            {{product?.productColor}}
+                                        </div>
+                                    </div>
+
+                                    <!-- row product category -->
+                                    <div class="product-row-content">
+                                        <div>
+                                            {{product?.productCategory}}
+                                        </div>
+                                    </div>
+
+                                    <!-- row product description -->
+                                    <div class="product-row-content">
+                                        <div>
+                                            {{product?.productDescription| slice:0:22}}...
+                                        </div>
+                                    </div>
+
+                                    <!-- row product action -->
+                                    <div class="product-row-content d-flex gap-3">
+                                        <button class="btn border-0 p-0 text-danger" (click)="deleteProduct(product)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                        <button class="btn border-0 p-0 text-primary" (click)="updateProduct(product)">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </ng-container>
+                            <!-- product list row end here -->
+                        </div>
+                        <!-- product list screen end here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
