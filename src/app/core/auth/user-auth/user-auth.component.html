@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="user-auth">
                 <!-- signup screen start here -->
-                <ng-container *ngIf="!showLogin">
+                <ng-container *ngIf="!showStage">
                     <div class="user-signup d-flex justify-content-center flex-column align-items-center">
                         <form [formGroup]="userSignupForm" class="user-signup-form border p-3 shadow-sm mt-5"
                             (ngSubmit)="userSignup()">
@@ -34,7 +34,7 @@
                             <button type="submit" class="btn signup-button w-100" [disabled]="userSignupForm.invalid"
                                 mat-raised-button>Signup</button>
 
-                            <a class="auth-toggle-link text-decoration-none" (click)="openUserLogin()">Already have
+                            <a class="auth-toggle-link text-decoration-none" (click)="switchStage()">Already have
                                 account? Click to
                                 login</a>
                         </form>
@@ -43,7 +43,7 @@
                 <!-- signup screen end here -->
 
                 <!-- login screen start here -->
-                <ng-container *ngIf="showLogin">
+                <ng-container *ngIf="showStage">
                     <div class="user-login d-flex justify-content-center flex-column align-items-center">
                         <form [formGroup]="userLoginForm" class="user-login-form border p-3 shadow-sm mt-5"
                             (ngSubmit)="userLogin()">
@@ -66,7 +66,7 @@
                             <!-- login button -->
                             <button type="submit" class="btn login-button w-100" [disabled]="userLoginForm.invalid"
                                 mat-raised-button>Login</button>
-                            <a class="auth-toggle-link text-decoration-none" (click)=" openUserSignup()">Don't have
+                            <a class="auth-toggle-link text-decoration-none" (click)="switchStage()">Don't have
                                 account? Click to
                                 signup</a>
                         </form>

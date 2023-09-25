@@ -12,7 +12,7 @@ import { UserService } from 'src/app/core/services/user.service';
 export class UserAuthComponent implements OnInit {
   userSignupForm: FormGroup;
   userLoginForm: FormGroup
-  showLogin: boolean = false;
+  showStage: boolean = false;
   authError: string = "";
 
   constructor(
@@ -65,12 +65,8 @@ export class UserAuthComponent implements OnInit {
     })
   }
 
-  openUserLogin() {
-    this.showLogin = true;
-  }
-
-  openUserSignup() {
-    this.showLogin = false;
+  switchStage() {
+    return this.showStage = this.showStage ? false : true;
   }
 
   localCartToRemoteCart() {
