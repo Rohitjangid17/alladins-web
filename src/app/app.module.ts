@@ -19,6 +19,9 @@ import { SellerAddProductComponent } from './pages/products/seller-add-product/s
 import { ProductDetailsComponent } from './pages/products/product-details/product-details.component';
 import { CheckoutComponent } from './pages/orders/checkout/checkout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

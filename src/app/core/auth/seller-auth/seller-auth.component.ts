@@ -59,11 +59,7 @@ export class SellerAuthComponent implements OnInit {
     })
   }
 
-  openLogin() {
-    this.loginShow = true;
-  }
-
-  openSignup() {
-    this.loginShow = false;
+  switchStage() {
+    return this.loginShow = this.loginShow ? false : true;
   }
 }

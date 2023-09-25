@@ -1,37 +1,77 @@
-<div class="seller-auth">
-    <!-- Signup Area -->
-    <ng-container *ngIf="!loginShow">
-        <div class="signup">
-            <h1 class="form-header">Seller Signup</h1>
-            <form class="seller-signup" [formGroup]="sellerSignupForm" (ngSubmit)="signup()">
-                <input type="text" class="form-input" formControlName="user_name" name="name" placeholder="Enter Name">
-                <input type="password" class="form-input" formControlName="user_password" name="password"
-                    placeholder="Enter Password">
-                <input type="email" class="form-input" formControlName="user_email" name="email"
-                    placeholder="Enter Email">
+<div class="seller-auth container">
+    <div class="row">
+        <div class="col-12">
+            <!-- signup screen start here -->
+            <ng-container *ngIf="!loginShow">
+                <div class="signup d-flex justify-content-center flex-column align-items-center">
+                    <form class="seller-signup border p-3 shadow-sm mt-5" [formGroup]="sellerSignupForm"
+                        (ngSubmit)="signup()">
+                        <h1 class="my-4">Seller Signup</h1>
+                        <!-- seller name form field -->
+                        <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                            <mat-label>Seller Name</mat-label>
+                            <input type="text" name="name" formControlName="user_name" class="form-control shadow-none"
+                                placeholder="Enter seller Name" matInput />
+                        </mat-form-field>
 
-                <button type="submit" class="signup-button" [disabled]="sellerSignupForm.invalid">Sign Up</button>
+                        <!-- seller email form field -->
+                        <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                            <mat-label>Seller Email</mat-label>
+                            <input type="email" name="email" formControlName="user_email"
+                                class="form-control shadow-none" placeholder="Enter seller email" matInput />
+                        </mat-form-field>
 
-                <a class="auth-toggle-link" (click)="openLogin()">Already have account? Click to login</a>
-            </form>
+                        <!-- seller password form field -->
+                        <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                            <mat-label>Seller Password</mat-label>
+                            <input type="password" name="password" formControlName="user_password"
+                                class="form-control shadow-none" placeholder="Enter seller password" matInput />
+                        </mat-form-field>
+
+                        <!-- signup button -->
+                        <button type="submit" class="btn signup-button w-100" [disabled]="sellerSignupForm.invalid"
+                            mat-raised-button>Signup</button>
+
+                        <a class="auth-toggle-link text-decoration-none" (click)="switchStage()">Already
+                            have account?
+                            Click to login</a>
+                    </form>
+                </div>
+            </ng-container>
+            <!-- signup screen end here -->
+
+            <!-- login screen start here -->
+            <ng-container *ngIf="loginShow">
+                <div class="login d-flex justify-content-center flex-column align-items-center">
+                    <p class="error">{{authError}}</p>
+                    <form class="seller-login border p-3 shadow-sm mt-5" [formGroup]="sellerLoginForm"
+                        (ngSubmit)="login()">
+                        <h1 class="my-4">Seller Login</h1>
+                        <!-- seller email form field -->
+                        <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                            <mat-label>Seller Email</mat-label>
+                            <input type="email" name="email" formControlName="user_email"
+                                class="form-control shadow-none" placeholder="Enter seller email" matInput />
+                        </mat-form-field>
+
+                        <!-- seller password form field -->
+                        <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                            <mat-label>Seller Password</mat-label>
+                            <input type="password" name="password" formControlName="user_password"
+                                class="form-control shadow-none" placeholder="Enter seller password" matInput />
+                        </mat-form-field>
+
+                        <!-- login button -->
+                        <button type="submit" class="btn login-button w-100" [disabled]="sellerLoginForm.invalid"
+                            mat-raised-button>Login</button>
+
+                        <a class="auth-toggle-link text-decoration-none" (click)="switchStage()">Don't have account?
+                            Click to signup</a>
+                    </form>
+                </div>
+            </ng-container>
+            <!-- login screen end here -->
         </div>
-    </ng-container>
-
-    <!-- Login Area -->
-    <ng-container *ngIf="loginShow">
-        <div class="login">
-            <h1 class="form-header">Seller Login</h1>
-            <p class="error">{{authError}}</p>
-            <form class="seller-login" [formGroup]="sellerLoginForm" (ngSubmit)="login()">
-                <input type="email" class="form-input" formControlName="user_email" name="email"
-                    placeholder="Enter Email">
-                <input type="password" class="form-input" formControlName="user_password" name="password"
-                    placeholder="Enter Password">
-
-                <button type="submit" class="login-button" [disabled]="sellerLoginForm.invalid">Login</button>
-                <a class="auth-toggle-link" (click)="openSignup()">Don't have account? Click to signup</a>
-            </form>
-        </div>
-    </ng-container>
+    </div>
 
 </div>
