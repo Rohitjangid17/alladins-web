@@ -4,15 +4,15 @@ import { AuthGuard } from './core/guard/auth.guard';
 
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/seller-home.component';
-import { SellerAddProductComponent } from './pages/seller-add-product/seller-add-product.component';
-import { SellerUpdateProductComponent } from './pages/seller-update-product/seller-update-product.component';
 import { SearchComponent } from './pages/search/search.component';
-import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { CartSummaryComponent } from './pages/cart-summary/cart-summary.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { SellerAuthComponent } from './core/auth/seller-auth/seller-auth.component';
 import { UserAuthComponent } from './core/auth/user-auth/user-auth.component';
+import { SellerAddProductComponent } from './pages/products/seller-add-product/seller-add-product.component';
+import { SellerUpdateProductComponent } from './pages/products/seller-update-product/seller-update-product.component';
+import { ProductDetailsComponent } from './pages/products/product-details/product-details.component';
 
 const routes: Routes = [
   {
