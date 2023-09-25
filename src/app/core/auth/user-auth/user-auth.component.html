@@ -1,36 +1,79 @@
-<div class="user-auth">
-    <ng-container *ngIf="!showLogin">
-        <div class="user-signup">
-            <h1>User Signup</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="user-auth">
+                <!-- signup screen start here -->
+                <ng-container *ngIf="!showLogin">
+                    <div class="user-signup d-flex justify-content-center flex-column align-items-center">
+                        <form [formGroup]="userSignupForm" class="user-signup-form border p-3 shadow-sm mt-5"
+                            (ngSubmit)="userSignup()">
+                            <h1 class="my-4">User Signup</h1>
 
-            <form [formGroup]="userSignupForm" class="user-signup-form" (ngSubmit)="userSignup()">
-                <input type="text" name="name" class="form-input" formControlName="user_name"
-                    placeholder="Enter user name" />
-                <input type="text" name="email" class="form-input" formControlName="user_email"
-                    placeholder="Enter user email" />
-                <input type="password" name="password" class="form-input" formControlName="user_password"
-                    placeholder="Enter password" />
+                            <!-- user name form field -->
+                            <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                                <mat-label>User Name</mat-label>
+                                <input type="text" name="name" formControlName="user_name"
+                                    class="form-control shadow-none" placeholder="Enter user Name" matInput />
+                            </mat-form-field>
 
-                <button type="submit" class="user-signup-button" [disabled]="userSignupForm.invalid">Signup</button>
-                <a class="auth-toggle-link" (click)="openUserLogin()">Already have account? Click to login</a>
-            </form>
+                            <!-- user email form field -->
+                            <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                                <mat-label>User Email</mat-label>
+                                <input type="email" name="email" formControlName="user_email"
+                                    class="form-control shadow-none" placeholder="Enter user email" matInput />
+                            </mat-form-field>
+
+                            <!-- user password form field -->
+                            <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                                <mat-label>User Password</mat-label>
+                                <input type="password" name="password" formControlName="user_password"
+                                    class="form-control shadow-none" placeholder="Enter user password" matInput />
+                            </mat-form-field>
+
+                            <!-- signup button -->
+                            <button type="submit" class="btn signup-button w-100" [disabled]="userSignupForm.invalid"
+                                mat-raised-button>Signup</button>
+
+                            <a class="auth-toggle-link text-decoration-none" (click)="openUserLogin()">Already have
+                                account? Click to
+                                login</a>
+                        </form>
+                    </div>
+                </ng-container>
+                <!-- signup screen end here -->
+
+                <!-- login screen start here -->
+                <ng-container *ngIf="showLogin">
+                    <div class="user-login d-flex justify-content-center flex-column align-items-center">
+                        <form [formGroup]="userLoginForm" class="user-login-form border p-3 shadow-sm mt-5"
+                            (ngSubmit)="userLogin()">
+                            <p>{{authError}}</p>
+                            <h1 class="my-4">User Login</h1>
+                            <!-- seller email form field -->
+                            <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                                <mat-label>User Email</mat-label>
+                                <input type="email" name="email" formControlName="user_email"
+                                    class="form-control shadow-none" placeholder="Enter user email" matInput />
+                            </mat-form-field>
+
+                            <!-- seller password form field -->
+                            <mat-form-field appearance="outline" class="form-group w-100 d-block">
+                                <mat-label>User Password</mat-label>
+                                <input type="password" name="password" formControlName="user_password"
+                                    class="form-control shadow-none" placeholder="Enter user password" matInput />
+                            </mat-form-field>
+
+                            <!-- login button -->
+                            <button type="submit" class="btn login-button w-100" [disabled]="userLoginForm.invalid"
+                                mat-raised-button>Login</button>
+                            <a class="auth-toggle-link text-decoration-none" (click)=" openUserSignup()">Don't have
+                                account? Click to
+                                signup</a>
+                        </form>
+                    </div>
+                </ng-container>
+                <!-- login screen end here -->
+            </div>
         </div>
-    </ng-container>
-
-    <ng-container *ngIf="showLogin">
-        <div class="user-login">
-            <h1>User Login</h1>
-            <form [formGroup]="userLoginForm" class="user-signup-form" (ngSubmit)="userLogin()">
-                <p>{{authError}}</p>
-                <input type="text" name="email" class="form-input" formControlName="user_email"
-                    placeholder="Enter user email" />
-                <input type="password" name="password" class="form-input" formControlName="user_password"
-                    placeholder="Enter password" />
-
-                <button type="submit" class="user-signup-button" [disabled]="userLoginForm.invalid">Login</button>
-                <a class="auth-toggle-link" (click)="openUserSignup()">Don't have account? Click to signup</a>
-            </form>
-        </div>
-    </ng-container>
-
+    </div>
 </div>
