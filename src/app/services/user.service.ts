@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class UserService {
   invalidUserAuth = new EventEmitter<boolean>(false);
+  apiUrl: string = "https://rohitjangid17.github.io/alladin-api/database.json";
 
   constructor(
     private _httpClient: HttpClient,
@@ -15,7 +16,7 @@ export class UserService {
   ) { }
 
   userSignup(data: Signup) {
-    this._httpClient.post<Signup>("http://localhost:3000/users", data, { observe: "response" })
+    this._httpClient.post<Signup>(this.apiUrl + "/users", data, { observe: "response" })
       .subscribe((userSignupRes) => {
         if (userSignupRes) {
           localStorage.setItem('user', JSON.stringify(userSignupRes.body));
@@ -25,7 +26,7 @@ export class UserService {
   }
 
   userLogin(data: Login) {
-    this._httpClient.get<Signup[]>(`http://localhost:3000/users?userEmail=${data?.userEmail}&userPassword=${data?.userPassword}`, { observe: "response" })
+    this._httpClient.get<Signup[]>(`${this.apiUrl}/users?userEmail=${data?.userEmail}&userPassword=${data?.userPassword}`, { observe: "response" })
       .subscribe((userRes) => {
         if (userRes && userRes.body && userRes.body.length) {
           console.log(userRes);

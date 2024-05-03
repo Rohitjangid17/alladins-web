@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
   isLoginError = new EventEmitter<boolean>(false);
+  apiUrl: string = "https://rohitjangid17.github.io/alladin-api/database.json";
 
   constructor(
     private _httpClient: HttpClient,
@@ -17,7 +18,7 @@ export class SellerService {
   ) { }
 
   userSignup(data: Signup) {
-    this._httpClient.post("http://localhost:3000/seller", data, { observe: 'response' }).subscribe(result => {
+    this._httpClient.post(this.apiUrl + "/seller", data, { observe: 'response' }).subscribe(result => {
       // this.isSellerLoggedIn.next(true);
       localStorage.setItem('seller', JSON.stringify(result.body));
       this._router.navigate(["seller-home"]);
@@ -25,7 +26,7 @@ export class SellerService {
   }
 
   userLogin(data: Login) {
-    this._httpClient.get(`http://localhost:3000/seller?userEmail=${data.userEmail}&userPassword=${data.userPassword}`, { observe: "response" }).subscribe((result: any) => {
+    this._httpClient.get(`${this.apiUrl}/seller?userEmail=${data.userEmail}&userPassword=${data.userPassword}`, { observe: "response" }).subscribe((result: any) => {
       console.log(result);
       if (result && result.body && result.body.length) {
         console.log("User Login " + result);
